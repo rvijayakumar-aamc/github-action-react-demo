@@ -1,0 +1,10 @@
+name: Get Context Variables
+on: workflow_dispatch
+jobs:
+    PrintContext:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Git Context
+              run: echo "${{ toJSON(github)}}"
+
+
