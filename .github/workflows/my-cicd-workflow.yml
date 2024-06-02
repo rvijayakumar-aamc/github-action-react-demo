@@ -19,7 +19,7 @@ jobs:
       - name: Deploy Code
         run: echo "Deploying"
   AutomationTest:
-    needs: CodeCheckout
+    needs: [CodeCheckout, Deployment]
     runs-on: ubuntu-latest
     steps:
       - name: Deploy Code
