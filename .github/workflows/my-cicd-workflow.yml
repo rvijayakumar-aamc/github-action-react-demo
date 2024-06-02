@@ -13,9 +13,15 @@ jobs:
       - name: Execute Tests
         run: npm test
   Deployment:
-      needs: CodeCheckout
-      runs-on: ubuntu-latest
-      steps:
+    needs: CodeCheckout
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy Code
         run: echo "Deploying"
+  AutomationTest:
+    needs: CodeCheckout
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Code
+        run: echo "Deploying"      
 
