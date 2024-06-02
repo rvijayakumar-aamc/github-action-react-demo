@@ -1,7 +1,7 @@
 name: CI CD Workflow
 on: push
 jobs:
-  c:
+  CodeCheckout:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,5 +17,5 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Deploy Code
-        run: echo "Deploying code"
+        run: echo "Deploying"
 
